@@ -52,4 +52,4 @@ sed "s/;;/;\\\N;/g" data.csv |
 sed "s/[;]\s/;\\\N/" data.csv |
 sed "s/[;]/,/g" data.csv |
 sed "s/\([0-9][0-9][0-9]\),/\1./g" data.csv |
-sed "s/a/A/g" data11.csv | sed "s/b/B/g" data11.csv | sed "s/c/C/g" data11.csv > output.csv
+sed "s/a/A/g" data.csv | sed "s/b/B/g" data.csv | sed "s/c/C/g" data.csv > output.csv
