@@ -41,15 +41,4 @@
 #
 #  >>> Escriba su codigo a partir de este punto <<<
 #
-sed "s/\//-/g" data.csv |
-sed "s/-\([0-9][0-9]\);/-20\1;/" data.csv |
-sed "s/-\([0-9]\)-/-0\1-/" data.csv |
-sed "s/^\([0-9]\)-/0\1-/" data.csv |
-sed "s/^\([0-9][0-9]\)-\([0-9][0-9]\)-\([0-9][0-9]*\);/\3-\2-\1;/" data.csv |
-sed "s/n/N/g" data.csv |
-sed "s/;N/;\\\N/g" data.csv |
-sed "s/;;/;\\\N;/g" data.csv |
-sed "s/[;]\s/;\\\N/" data.csv |
-sed "s/[;]/,/g" data.csv |
-sed "s/\([0-9][0-9][0-9]\),/\1./g" data.csv |
-sed "s/a/A/g" data.csv | sed "s/b/B/g" data.csv | sed "s/c/C/g" data.csv > output.csv
+sed "s/\//-/g" data.csv | sed "s/-\([0-9][0-9]\);/-20\1;/" | sed "s/-\([0-9]\)-/-0\1-/" | sed "s/^\([0-9]\)-/0\1-/" | sed "s/^\([0-9][0-9]\)-\([0-9][0-9]\)-\([0-9][0-9]*\);/\3-\2-\1;/" | sed "s/n/N/g" | sed "s/;N/;\\\N/g" | sed "s/;;/;\\\N;/g" | sed "s/[;]\s/;\\\N/" | sed "s/[;]/,/g" | sed "s/\([0-9][0-9][0-9]\),/\1./g" | sed "s/a/A/g" | sed "s/b/B/g" | sed "s/c/C/g" > output.csv
